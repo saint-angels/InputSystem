@@ -661,6 +661,13 @@ namespace UnityEngine.InputSystem
         }
 
         /// <summary>
+        /// TODO:
+        /// </summary>
+        public InputActionAsset globalInputActionsAsset { get; set; }
+
+        public bool disableGlobalInputActions { get; set; }
+
+        /// <summary>
         /// Enable or disable an internal feature by its name.
         /// </summary>
         /// <param name="featureName">Name of the feature.</param>
