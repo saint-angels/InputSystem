@@ -374,6 +374,8 @@ namespace UnityEngine.InputSystem
         [Obsolete("Use 'InputSystem.devices' instead. (UnityUpgradable) -> InputSystem.devices", error: false)]
         public static ReadOnlyArray<InputDevice> all => InputSystem.devices;
 
+        public DeviceType deviceType => m_DeviceType;
+
         /// <summary>
         /// This constructor is public for the sake of <c>Activator.CreateInstance</c> only. To construct
         /// devices, use methods such as <see cref="InputSystem.AddDevice{TDevice}(string)"/>. Manually
@@ -708,6 +710,8 @@ namespace UnityEngine.InputSystem
         // NOTE: This contains *leaf* controls only.
         internal uint[] m_StateOffsetToControlMap;
 
+        private DeviceType m_DeviceType;
+
         // ATM we pack everything into 32 bits. Given we're operating on bit offsets and counts, this imposes some tight limits
         // on controls and their associated state memory. Should this turn out to be a problem, bump m_StateOffsetToControlMap
         // to a ulong[] and up the counts here to account for having 64 bits available instead of only 32.
@@ -906,5 +910,22 @@ namespace UnityEngine.InputSystem
                 return deviceOfType;
             }
         }
+    }
+
+    [Flags]
+    public enum DeviceType
+    {
+	    Unspecified = 0,
+	    Keyboard = 1 << 0,
+	    Mouse = 1 << 1,
+	    Gamepad = 1 << 2,
+	    Touch = 1 << 3,
+	    XR = 1 << 4,
+	    Joystick = 1 << 5,
+	    RacingWheel = 1 << 6,
+	    FlightStick = 1 << 7,
+	    ArcadeStick = 1 << 8,
+	    Motion = 1 << 9,
+	    Any = ~Unspecified
     }
 }

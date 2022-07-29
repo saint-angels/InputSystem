@@ -668,6 +668,11 @@ namespace UnityEngine.InputSystem
         public bool disableGlobalInputActions { get; set; }
 
         /// <summary>
+        /// How long to wait between raising repeat events.
+        /// </summary>
+        public float inputEventRepeatDelayInSeconds { get; set; }
+
+        /// <summary>
         /// Enable or disable an internal feature by its name.
         /// </summary>
         /// <param name="featureName">Name of the feature.</param>

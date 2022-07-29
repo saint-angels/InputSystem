@@ -3078,6 +3078,8 @@ namespace UnityEngine.InputSystem
 
         #endregion
 
+        public static HighLevel.InputEventSystem eventSystem => s_EventSystem;
+
         /// <summary>
         /// The current version of the input system package.
         /// </summary>
@@ -3093,6 +3095,7 @@ namespace UnityEngine.InputSystem
 
         internal static InputManager s_Manager;
         internal static InputRemoting s_Remote;
+        internal static HighLevel.InputEventSystem s_EventSystem;
 
 #if DEVELOPMENT_BUILD || UNITY_EDITOR
         internal static RemoteInputPlayerConnection s_RemoteConnection;

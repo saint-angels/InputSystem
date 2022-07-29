@@ -438,5 +438,7 @@ namespace UnityEngine.InputSystem.HighLevel
         public static Vector2 mousePosition { get; }
         public static bool mousePresent { get; }
         public static float mouseScrollDelta { get; }
+
+        public static InputEvent lastInput { get; }
     }
 }
