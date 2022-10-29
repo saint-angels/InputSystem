@@ -42,7 +42,7 @@ public partial class @GestureControls : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""314b4605-250d-4135-8de2-23417ddb4104"",
                     ""path"": ""<Mouse>/position"",
-                    ""interactions"": ""Circle(duration=5,pressPoint=0.5)"",
+                    ""interactions"": ""Circle(duration=1,pressPoint=0.5)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""CircleAction"",
