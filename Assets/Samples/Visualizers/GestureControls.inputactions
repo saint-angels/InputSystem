@@ -1,0 +1,34 @@
+{
+    "name": "GestureControls",
+    "maps": [
+        {
+            "name": "DefaultActionMap",
+            "id": "2b5443ee-dc0a-418c-8f1e-9c53f5d368cc",
+            "actions": [
+                {
+                    "name": "CircleAction",
+                    "type": "Button",
+                    "id": "e7bf42c3-2825-4038-a1f8-5a7ac11ebf36",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "314b4605-250d-4135-8de2-23417ddb4104",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Circle",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CircleAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
