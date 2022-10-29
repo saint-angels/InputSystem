@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 22
+  controlID: 101
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 605
     height: 1299
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,15 +120,15 @@ MonoBehaviour:
     y: 770
     width: 1955
     height: 529
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
+  m_Selected: 1
   m_LastSelected: 3
 --- !u!114 &6
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 108
+  controlID: 24
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 1470
     height: 770
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_MinSize: {x: 600, y: 300}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: SimpleControls (Input Actions)
+    m_Text: GestureControls (Input Actions)
     m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
@@ -309,8 +309,8 @@ MonoBehaviour:
     m_SaveData: []
   m_ActionMapsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d26be151
-    m_LastClickedID: 1373727698
+    m_SelectedIDs: 9e522cf5
+    m_LastClickedID: -181644642
     m_ExpandedIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -327,13 +327,13 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 89e66608
-    m_LastClickedID: 140961417
-    m_ExpandedIDs: 4e6ba5c9c4eb47e54c38b8fb89e66608d26be151
+    m_SelectedIDs: f85a1c35
+    m_LastClickedID: 891050744
+    m_ExpandedIDs: 868c62eb
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -355,7 +355,19 @@ MonoBehaviour:
     m_AdvancedDropdownState:
       states:
       - itemId: 371857150
-        selectedIndex: 7
+        selectedIndex: 6
+        scroll: {x: 0, y: 0}
+      - itemId: 82801685
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -298396491
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -1321821545
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -654788001
+        selectedIndex: -1
         scroll: {x: 0, y: 0}
       - itemId: -582599340
         selectedIndex: -1
@@ -363,84 +375,29 @@ MonoBehaviour:
       - itemId: 592027723
         selectedIndex: -1
         scroll: {x: 0, y: 0}
-      - itemId: 656259478
-        selectedIndex: 4
+      - itemId: 403810634
+        selectedIndex: 0
+        scroll: {x: 0, y: 0}
+      - itemId: -1273337413
+        selectedIndex: -1
         scroll: {x: 0, y: 0}
     m_ManualPathEditMode: 0
   m_ActionAssetManager:
     m_AssetObjectForEditing: {fileID: 0}
-    m_ImportedAssetObject: {fileID: -944628639613478452, guid: dc782cd8f65d34f0a9c0e85380a5b684,
+    m_ImportedAssetObject: {fileID: -944628639613478452, guid: ebd81816bcc6f164db01c3aea703662b,
       type: 3}
-    m_AssetGUID: dc782cd8f65d34f0a9c0e85380a5b684
-    m_ImportedAssetJson: "{\n    \"name\": \"SimpleControls\",\n    \"maps\": [\n       
-      {\n            \"name\": \"gameplay\",\n            \"id\": \"265c38f5-dd18-4d34-b198-aec58e1627ff\",\n           
-      \"actions\": [\n                {\n                    \"name\": \"fire\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"1077f913-a9f9-41b1-acb3-b9ee0adbc744\",\n                   
-      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
-      },\n                {\n                    \"name\": \"move\",\n                   
-      \"type\": \"Value\",\n                    \"id\": \"50fd2809-3aa3-4a90-988e-1facf6773553\",\n                   
-      \"expectedControlType\": \"Stick\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
-      },\n                {\n                    \"name\": \"look\",\n                   
-      \"type\": \"Value\",\n                    \"id\": \"c60e0974-d140-4597-a40e-9862193067e9\",\n                   
+    m_AssetGUID: ebd81816bcc6f164db01c3aea703662b
+    m_ImportedAssetJson: "{\n    \"name\": \"GestureControls\",\n    \"maps\": [\n       
+      {\n            \"name\": \"DefaultActionMap\",\n            \"id\": \"2b5443ee-dc0a-418c-8f1e-9c53f5d368cc\",\n           
+      \"actions\": [\n                {\n                    \"name\": \"CircleAction\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"e7bf42c3-2825-4038-a1f8-5a7ac11ebf36\",\n                   
       \"expectedControlType\": \"Vector2\",\n                    \"processors\":
       \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
-      true\n                },\n                {\n                    \"name\":
-      \"circle\",\n                    \"type\": \"Value\",\n                   
-      \"id\": \"97f004d0-39ee-4521-8152-24dbf10450c0\",\n                    \"expectedControlType\":
-      \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
-      }\n            ],\n            \"bindings\": [\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"abb776f3-f329-4f7b-bbf8-b577d13be018\",\n                   
-      \"path\": \"*/{PrimaryAction}\",\n                    \"interactions\": \"Tap,SlowTap\",\n                   
+      true\n                }\n            ],\n            \"bindings\": [\n               
+      {\n                    \"name\": \"\",\n                    \"id\": \"314b4605-250d-4135-8de2-23417ddb4104\",\n                   
+      \"path\": \"<Mouse>/leftButton\",\n                    \"interactions\": \"Circle(duration=0.4,pressPoint=0.5)\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"fire\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"e1b8c4dd-7b3a-4db6-a93a-0889b59b1afc\",\n                   
-      \"path\": \"<Gamepad>/leftStick\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"move\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"Dpad\",\n                    \"id\": \"cefc16fc-557a-44b0-939f-2ad792876b07\",\n                   
-      \"path\": \"Dpad\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"move\",\n                    \"isComposite\": true,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"up\",\n                    \"id\": \"07244659-79df-461d-b329-defbe2fbc5f6\",\n                   
-      \"path\": \"<Keyboard>/w\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"move\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"down\",\n                    \"id\": \"f0ec75cb-f02c-40d2-a33f-1fd6eab2ae0b\",\n                   
-      \"path\": \"<Keyboard>/s\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"move\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"left\",\n                    \"id\": \"21fe6bfe-4721-4483-9f4a-a0031ade105c\",\n                   
-      \"path\": \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"move\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"right\",\n                    \"id\": \"2dd39746-c75c-4a11-838a-e59eacaf4e0b\",\n                   
-      \"path\": \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"move\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"c106d6e6-2780-47ff-b318-396171bd54cc\",\n                   
-      \"path\": \"<Gamepad>/rightStick\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"look\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n               
-      {\n                    \"name\": \"\",\n                    \"id\": \"578caa03-6827-4797-adfc-a59770c437fe\",\n                   
-      \"path\": \"<Pointer>/delta\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"ScaleVector2(x=2,y=2)\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"look\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n               
-      {\n                    \"name\": \"\",\n                    \"id\": \"7a53bd0c-fb9e-4b8e-83bc-992a8034ed74\",\n                   
-      \"path\": \"<Mouse>/leftButton\",\n                    \"interactions\": \"Circle\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"circle\",\n                    \"isComposite\": false,\n                   
+      \"action\": \"CircleAction\",\n                    \"isComposite\": false,\n                   
       \"isPartOfComposite\": false\n                }\n            ]\n        }\n   
       ],\n    \"controlSchemes\": []\n}"
     m_IsDirty: 0
@@ -451,11 +408,11 @@ MonoBehaviour:
     m_ControlSchemes: []
     m_SearchText: 
   m_DirtyTitle:
-    m_Text: (*) SimpleControls (Input Actions)
+    m_Text: (*) GestureControls (Input Actions)
     m_Image: {fileID: 0}
     m_Tooltip: 
   m_Title:
-    m_Text: SimpleControls (Input Actions)
+    m_Text: GestureControls (Input Actions)
     m_Image: {fileID: 0}
     m_Tooltip: 
 --- !u!114 &13
@@ -784,7 +741,7 @@ MonoBehaviour:
       messages: 
       output: 'TEST_SAMPLEGROUP 333.00 Undefined
 
-        
+
 
         ##performancetestresult2:{"Name":"DomainReloadTests.Measure_Survives_DomainReloadWithoutCompilation","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST_SAMPLEGROUP","Unit":8,"IncreaseIsBetter":false,"Samples":[333.0],"Min":333.0,"Max":333.0,"Median":333.0,"Average":333.0,"StandardDeviation":0.0,"Sum":333.0}]}
 
@@ -812,7 +769,7 @@ MonoBehaviour:
       messages: 
       output: 'TEST_SAMPLEGROUP 111.00 Undefined
 
-        
+
 
         ##performancetestresult2:{"Name":"DomainReloadTests.Measure_Survives_EnterPlaymode","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST_SAMPLEGROUP","Unit":8,"IncreaseIsBetter":false,"Samples":[111.0],"Min":111.0,"Max":111.0,"Median":111.0,"Average":111.0,"StandardDeviation":0.0,"Sum":111.0}]}
 
@@ -840,7 +797,7 @@ MonoBehaviour:
       messages: 
       output: 'TEST_SAMPLEGROUP 222.00 Undefined
 
-        
+
 
         ##performancetestresult2:{"Name":"DomainReloadTests.Measure_Survives_ScriptCompliation","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST_SAMPLEGROUP","Unit":8,"IncreaseIsBetter":false,"Samples":[222.0],"Min":222.0,"Max":222.0,"Median":222.0,"Average":222.0,"StandardDeviation":0.0,"Sum":222.0}]}
 
@@ -1054,7 +1011,7 @@ MonoBehaviour:
       output: 'TEST Millisecond Median:0.00 Min:0.00 Max:0.00 Avg:0.00 Std:0.00 SampleCount:
         4 Sum: 0.00
 
-        
+
 
         ##performancetestresult2:{"Name":"GenericTests.ZeroSampleGroups_Highlighted_MultipleSamples","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":2,"IncreaseIsBetter":false,"Samples":[0.0,0.0,0.0,0.0],"Min":0.0,"Max":0.0,"Median":0.0,"Average":0.0,"StandardDeviation":0.0,"Sum":0.0}]}
 
@@ -1077,7 +1034,7 @@ MonoBehaviour:
       messages: 
       output: 'TEST 0.00 Millisecond
 
-        
+
 
         ##performancetestresult2:{"Name":"GenericTests.ZeroSampleGroups_Highlighted_SingleSample","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":2,"IncreaseIsBetter":false,"Samples":[0.0],"Min":0.0,"Max":0.0,"Median":0.0,"Average":0.0,"StandardDeviation":0.0,"Sum":0.0}]}
 
@@ -1118,7 +1075,7 @@ MonoBehaviour:
 
         PERCENTILE 10.00 Second
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureCustomTests.MeasureCustom_MultipleSampleGroups","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"REGULAR","Unit":4,"IncreaseIsBetter":true,"Samples":[20.0],"Min":20.0,"Max":20.0,"Median":20.0,"Average":20.0,"StandardDeviation":0.0,"Sum":20.0},{"Name":"PERCENTILE","Unit":3,"IncreaseIsBetter":true,"Samples":[10.0],"Min":10.0,"Max":10.0,"Median":10.0,"Average":10.0,"StandardDeviation":0.0,"Sum":10.0}]}
 
@@ -1162,7 +1119,7 @@ MonoBehaviour:
       messages: 
       output: 'PERCENTILE 10.00 Second
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureCustomTests.MeasureCustom_PercentileSample_CorrectValues","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"PERCENTILE","Unit":3,"IncreaseIsBetter":true,"Samples":[10.0],"Min":10.0,"Max":10.0,"Median":10.0,"Average":10.0,"StandardDeviation":0.0,"Sum":10.0}]}
 
@@ -1186,7 +1143,7 @@ MonoBehaviour:
       output: 'PERCENTILE Second Median:20.00 Min:10.00 Max:20.00 Avg:15.00 Std:5.00
         SampleCount: 2 Sum: 30.00
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureCustomTests.MeasureCustom_PercentileSamples_CorrectValues","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"PERCENTILE","Unit":3,"IncreaseIsBetter":true,"Samples":[10.0,20.0],"Min":10.0,"Max":20.0,"Median":20.0,"Average":15.0,"StandardDeviation":5.0,"Sum":30.0}]}
 
@@ -1209,7 +1166,7 @@ MonoBehaviour:
       messages: 
       output: 'REGULAR 10.00 Byte
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureCustomTests.MeasureCustom_SampleGroup_CorrectValues","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"REGULAR","Unit":4,"IncreaseIsBetter":true,"Samples":[10.0],"Min":10.0,"Max":10.0,"Median":10.0,"Average":10.0,"StandardDeviation":0.0,"Sum":10.0}]}
 
@@ -1233,7 +1190,7 @@ MonoBehaviour:
       output: 'REGULAR Byte Median:20.00 Min:10.00 Max:20.00 Avg:15.00 Std:5.00 SampleCount:
         2 Sum: 30.00
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureCustomTests.MeasureCustom_SampleGroupWithSamples_CorrectValues","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"REGULAR","Unit":4,"IncreaseIsBetter":true,"Samples":[10.0,20.0],"Min":10.0,"Max":20.0,"Median":20.0,"Average":15.0,"StandardDeviation":5.0,"Sum":30.0}]}
 
@@ -1273,7 +1230,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:0.00 Min:0.00 Max:0.00 Avg:0.00 Std:0.00 SampleCount:
         9 Sum: 0.00
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_EmptyProfilerMarkers","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[0.000006159999999999855,0.0000061400000000020329,0.000006709999999998217,0.000006130000000001701,0.000006130000000001701,0.000006119999999998527,0.000006120000000001369,0.000006120000000001369,0.000006129999999998859],"Min":0.000006119999999998527,"Max":0.000006709999999998217,"Median":0.000006130000000001701,"Average":0.00000619555555555596,"StandardDeviation":1.8227641470509229e-7,"Sum":0.000055760000000003634}]}
 
@@ -1314,7 +1271,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:0.00 Min:0.00 Max:0.03 Avg:0.00 Std:0.01 SampleCount:
         10 Sum: 0.03
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_MeasurementCount","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[0.02579999999999999,0.00010000000000001674,0.00009999999999998899,0.00009999999999998899,0.00010000000000001674,0.00010000000000001674,0.00010000000000001674,0.00009999999999998899,0.00010000000000001674,0.00019999999999997797],"Min":0.00009999999999998899,"Max":0.02579999999999999,"Median":0.00010000000000001674,"Average":0.002680000000000002,"StandardDeviation":0.00770672433657776,"Sum":0.026800000000000019}]}
 
@@ -1338,7 +1295,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:0.00 Min:0.00 Max:0.02 Avg:0.00 Std:0.01 SampleCount:
         10 Sum: 0.02
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_MeasurementCountAndCleanup","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[0.016999999999999996,0.00010000000000000286,0.00010000000000000286,0.00010000000000000286,0.00010000000000000286,0.00009999999999998899,0.00010000000000000286,0.00009999999999998899,0.00010000000000000286,0.00020000000000000573],"Min":0.00009999999999998899,"Max":0.016999999999999996,"Median":0.00010000000000000286,"Average":0.0017999999999999996,"StandardDeviation":0.00506675438520558,"Sum":0.017999999999999996}]}
 
@@ -1362,7 +1319,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:5.00 Min:5.00 Max:5.00 Avg:5.00 Std:0.00 SampleCount:
         10 Sum: 50.00
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_MeasurementCountAndIterationCount","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0],"Min":5.0,"Max":5.0,"Median":5.0,"Average":5.0,"StandardDeviation":0.0,"Sum":50.0}]}
 
@@ -1386,7 +1343,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:0.00 Min:0.00 Max:0.02 Avg:0.00 Std:0.00 SampleCount:
         10 Sum: 0.02
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_MeasurementCountAndSetup","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[0.015100000000000003,0.00019999999999999185,0.00010000000000000286,0.00010000000000000286,0.00010000000000000286,0.00010000000000000286,0.00010000000000000286,0.00010000000000000286,0.00009999999999998899,0.00009999999999998899],"Min":0.00009999999999998899,"Max":0.015100000000000003,"Median":0.00010000000000000286,"Average":0.001609999999999999,"StandardDeviation":0.0044967655042263449,"Sum":0.01609999999999999}]}
 
@@ -1410,7 +1367,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:0.00 Min:0.00 Max:0.03 Avg:0.00 Std:0.01 SampleCount:
         10 Sum: 0.03
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_MeasurementCountAndSetupCleanup","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[0.030600000000000003,0.00010000000000001674,0.00010000000000001674,0.00020000000000000573,0.00010000000000001674,0.00020000000000000573,0.00009999999999998899,0.00010000000000001674,0.00019999999999997797,0.00009999999999998899],"Min":0.00009999999999998899,"Max":0.030600000000000003,"Median":0.00010000000000001674,"Average":0.0031800000000000037,"StandardDeviation":0.009140109408535545,"Sum":0.03180000000000004}]}
 
@@ -1434,7 +1391,7 @@ MonoBehaviour:
       output: 'Time Millisecond Median:15.70 Min:15.61 Max:15.87 Avg:15.71 Std:0.08
         SampleCount: 9 Sum: 141.37
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_NoArguments","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[15.700066666666667,15.621800000000008,15.87233333333333,15.60878333333335,15.776633333333337,15.625466666666663,15.77391666666667,15.695816666666645,15.692099999999983],"Min":15.60878333333335,"Max":15.87233333333333,"Median":15.695816666666645,"Average":15.707435185185183,"StandardDeviation":0.08206260085771891,"Sum":141.36691666666665}]}
 
@@ -1460,7 +1417,7 @@ MonoBehaviour:
 
         loop 15360240.74 Nanosecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_With_ValidProfilerMarkers","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[15.691983333333335,15.681549999999996,15.864299999999995,15.705316666666667,15.687633333333319,15.609900000000002,13.10826666666668,15.616983333333357,15.616083333333336],"Min":13.10826666666668,"Max":15.864299999999995,"Median":15.681549999999996,"Average":15.398001851851852,"StandardDeviation":0.8128063786432968,"Sum":138.58201666666668},{"Name":"loop","Unit":0,"IncreaseIsBetter":false,"Samples":[15360240.74074074],"Min":15360240.74074074,"Max":15360240.74074074,"Median":15360240.74074074,"Average":15360240.74074074,"StandardDeviation":0.0,"Sum":15360240.74074074}]}
 
@@ -1489,7 +1446,7 @@ MonoBehaviour:
 
         TEST_MARKER1 0.02 Second
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_WithCustomSampleGroup_And_MultipleProfilerMarkers_SetsTheCorrectSampleUnit_Run","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":0,"IncreaseIsBetter":false,"Samples":[31895466.666666677,30973866.666666669,32079533.333333326,31206400.00000001,31730366.666666669,31213333.33333333,31225399.999999998,31876933.33333334,31391433.33333334],"Min":30973866.666666669,"Max":32079533.333333326,"Median":31391433.33333334,"Average":31510303.70370371,"StandardDeviation":368002.3723234199,"Sum":283592733.3333334},{"Name":"TEST_MARKER","Unit":1,"IncreaseIsBetter":false,"Samples":[15704.62962962963],"Min":15704.62962962963,"Max":15704.62962962963,"Median":15704.62962962963,"Average":15704.62962962963,"StandardDeviation":0.0,"Sum":15704.62962962963},{"Name":"TEST_MARKER1","Unit":3,"IncreaseIsBetter":false,"Samples":[0.015735174074074076],"Min":0.015735174074074076,"Max":0.015735174074074076,"Median":0.015735174074074076,"Average":0.015735174074074076,"StandardDeviation":0.0,"Sum":0.015735174074074076}]}
 
@@ -1516,7 +1473,7 @@ MonoBehaviour:
         TEST_MARKER
         15714.54 Microsecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_WithCustomSampleGroup_And_ProfilerMarker_SetsTheCorrectSampleUnit_Run","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":0,"IncreaseIsBetter":false,"Samples":[15694816.666666668,15689966.666666665,15790166.666666665,15691616.666666657,15529533.333333347,15855016.666666681,15778683.333333334,15856200.00000002,15857750.00000001],"Min":15529533.333333347,"Max":15857750.00000001,"Median":15778683.333333334,"Average":15749305.55555556,"StandardDeviation":102746.78872156104,"Sum":141743750.00000004},{"Name":"TEST_MARKER","Unit":1,"IncreaseIsBetter":false,"Samples":[15714.537037037036],"Min":15714.537037037036,"Max":15714.537037037036,"Median":15714.537037037036,"Average":15714.537037037036,"StandardDeviation":0.0,"Sum":15714.537037037036}]}
 
@@ -1542,7 +1499,7 @@ MonoBehaviour:
 
         TEST_MARKER 15709.03 Microsecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureMethodTests.MeasureMethod_WithCustomSampleGroupInProfilerMarker_UsesDefaultSampleGroupPlusTheCustomOne_Run","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[15.692550000000003,15.609216666666669,15.787883333333335,15.861216666666678,15.690516666666668,16.024416666666679,15.862249999999998,15.777033333333313,15.45070000000002],"Min":15.45070000000002,"Max":16.024416666666679,"Median":15.777033333333313,"Average":15.750642592592597,"StandardDeviation":0.15587571776763077,"Sum":141.75578333333338},{"Name":"TEST_MARKER","Unit":1,"IncreaseIsBetter":false,"Samples":[15709.033333333335],"Min":15709.033333333335,"Max":15709.033333333335,"Median":15709.033333333335,"Average":15709.033333333335,"StandardDeviation":0.0,"Sum":15709.033333333335}]}
 
@@ -1598,7 +1555,7 @@ MonoBehaviour:
       messages: 
       output: 'TestMarker 4263900.00 Nanosecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureProfilerSamplesTests.MeasureProfilerSamples_SingleFrame_RecordsSample","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TestMarker","Unit":0,"IncreaseIsBetter":false,"Samples":[4263900.0],"Min":4263900.0,"Max":4263900.0,"Median":4263900.0,"Average":4263900.0,"StandardDeviation":0.0,"Sum":4263900.0}]}
 
@@ -1638,7 +1595,7 @@ MonoBehaviour:
       messages: 
       output: 'TestMarker 14309100.00 Nanosecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureProfilerSamplesTests.MeasureProfilerSamples_strings_SingleFrame_RecordsSample","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TestMarker","Unit":0,"IncreaseIsBetter":false,"Samples":[14309100.0],"Min":14309100.0,"Max":14309100.0,"Median":14309100.0,"Average":14309100.0,"StandardDeviation":0.0,"Sum":14309100.0}]}
 
@@ -1661,7 +1618,7 @@ MonoBehaviour:
       messages: 
       output: 'TestMarker 12199600.00 Nanosecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureProfilerSamplesTests.MeasureProfilerSamples_WhenNewScene_RecordsSample","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TestMarker","Unit":0,"IncreaseIsBetter":false,"Samples":[12199600.0],"Min":12199600.0,"Max":12199600.0,"Median":12199600.0,"Average":12199600.0,"StandardDeviation":0.0,"Sum":12199600.0}]}
 
@@ -1722,7 +1679,7 @@ MonoBehaviour:
       output: 'TEST Millisecond Median:16.02 Min:6.59 Max:16.02 Avg:13.58 Std:4.04
         SampleCount: 4 Sum: 54.33
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureScope.MeasureMultipleScopes_WithDefinition_MeasuresSamples","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":2,"IncreaseIsBetter":false,"Samples":[6.5853,15.7131,16.0183,16.0163],"Min":6.5853,"Max":16.0183,"Median":16.0163,"Average":13.58325,"StandardDeviation":4.042176580445243,"Sum":54.333}]}
 
@@ -1745,7 +1702,7 @@ MonoBehaviour:
       messages: 
       output: 'TEST 14.55 Millisecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureScope.MeasureScope_WithDefinition_MeasuresSample","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":2,"IncreaseIsBetter":false,"Samples":[14.5469],"Min":14.5469,"Max":14.5469,"Median":14.5469,"Average":14.5469,"StandardDeviation":0.0,"Sum":14.5469}]}
 
@@ -1768,7 +1725,7 @@ MonoBehaviour:
       messages: 
       output: 'Time 14.87 Millisecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureScope.MeasureScope_WithoutDefinition_MeasuresDefaultSample","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"Time","Unit":2,"IncreaseIsBetter":false,"Samples":[14.8674],"Min":14.8674,"Max":14.8674,"Median":14.8674,"Average":14.8674,"StandardDeviation":0.0,"Sum":14.8674}]}
 
@@ -1791,7 +1748,7 @@ MonoBehaviour:
       messages: 
       output: 'TEST 2.10 Microsecond
 
-        
+
 
         ##performancetestresult2:{"Name":"MeasureScope.MeasureScope_WithSampleGroup_ResultsIsInTheDefinedSampleUnit","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST","Unit":1,"IncreaseIsBetter":false,"Samples":[2.1],"Min":2.1,"Max":2.1,"Median":2.1,"Average":2.1,"StandardDeviation":0.0,"Sum":2.1}]}
 
@@ -1932,7 +1889,7 @@ MonoBehaviour:
       output: 'TEST_SAMLEGROUP Millisecond Median:3.00 Min:1.00 Max:5.00 Avg:3.00
         Std:1.41 SampleCount: 5 Sum: 15.00
 
-        
+
 
         ##performancetestresult2:{"Name":"MultipleDomainReloadTests.MeasureCustom_Survives_MultipleSessionEvents(ByReference)","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST_SAMLEGROUP","Unit":2,"IncreaseIsBetter":false,"Samples":[1.0,2.0,3.0,4.0,5.0],"Min":1.0,"Max":5.0,"Median":3.0,"Average":3.0,"StandardDeviation":1.4142135623730952,"Sum":15.0}]}
 
@@ -1961,7 +1918,7 @@ MonoBehaviour:
       output: 'TEST_SAMLEGROUP Millisecond Median:3.00 Min:1.00 Max:5.00 Avg:3.00
         Std:1.41 SampleCount: 5 Sum: 15.00
 
-        
+
 
         ##performancetestresult2:{"Name":"MultipleDomainReloadTests.MeasureCustom_Survives_MultipleSessionEvents(ByValue)","Version":"1","Categories":["Performance"],"SampleGroups":[{"Name":"TEST_SAMLEGROUP","Unit":2,"IncreaseIsBetter":false,"Samples":[1.0,2.0,3.0,4.0,5.0],"Min":1.0,"Max":5.0,"Median":3.0,"Average":3.0,"StandardDeviation":1.4142135623730952,"Sum":15.0}]}
 
@@ -2510,7 +2467,7 @@ MonoBehaviour:
 
         Teardown
 
-        
+
 
         ##performancetestresult2:{"Name":"TestSetupTeardown.Test","Version":"1","Categories":["Performance"],"SampleGroups":[]}
 
@@ -2551,7 +2508,7 @@ MonoBehaviour:
 
         Teardown
 
-        
+
 
         ##performancetestresult2:{"Name":"UnityTestSetupTeardown.Test","Version":"1","Categories":["Performance"],"SampleGroups":[]}
 
@@ -2640,22 +2597,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Samples/Visualizers
+    - Assets/CircleGesture
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Samples/Visualizers
+  - Assets/CircleGesture
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\mikep\InputSystem
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bc5c0000
-    m_LastClickedID: 23740
-    m_ExpandedIDs: 000000008e4f0000e24f0000f04f0000805c0000905c000000ca9a3bffffff7f
+    m_SelectedIDs: 42520000
+    m_LastClickedID: 21058
+    m_ExpandedIDs: 00000000784f00007a4f00007c4f0000fc4f00000c52000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2683,7 +2640,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e4f0000
+    m_ExpandedIDs: 00000000784f00007a4f00007c4f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2708,24 +2665,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 72510000
+    m_LastClickedInstanceID: 20850
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SimpleControls
-      m_OriginalName: SimpleControls
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25166
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -2813,9 +2770,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9a5f0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 8ce1ffffc0e2ffff64e6ffff66e6ffff14f0ffffb0f4ffffe8f9ffff06fbffff
+      m_SelectedIDs: f64e0000
+      m_LastClickedID: 20214
+      m_ExpandedIDs: 04fbffff06fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

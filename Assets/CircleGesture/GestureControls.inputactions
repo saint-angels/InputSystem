@@ -7,20 +7,20 @@
             "actions": [
                 {
                     "name": "CircleAction",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "e7bf42c3-2825-4038-a1f8-5a7ac11ebf36",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "314b4605-250d-4135-8de2-23417ddb4104",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "Circle",
+                    "path": "<Mouse>/position",
+                    "interactions": "Circle(duration=5,pressPoint=0.5)",
                     "processors": "",
                     "groups": "",
                     "action": "CircleAction",
