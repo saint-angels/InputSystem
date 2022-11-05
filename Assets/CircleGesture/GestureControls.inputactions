@@ -17,15 +17,37 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "314b4605-250d-4135-8de2-23417ddb4104",
+                    "name": "One Modifier",
+                    "id": "522008cb-d84d-4c7e-8cc7-fe4eb7d62f5a",
+                    "path": "OneModifier",
+                    "interactions": "Circle(duration=1,maxInflections=5)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CircleAction",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "binding",
+                    "id": "e640d0aa-6c90-4f8e-835d-9315fa705959",
                     "path": "<Mouse>/position",
-                    "interactions": "Circle(duration=1,pressPoint=0.5)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "CircleAction",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "modifier",
+                    "id": "5d00006b-1adf-4636-93c8-2a1f9bf86b4f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CircleAction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

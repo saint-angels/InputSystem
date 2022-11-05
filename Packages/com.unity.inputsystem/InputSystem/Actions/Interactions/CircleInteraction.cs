@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Remoting.Contexts;
@@ -18,21 +19,7 @@ namespace UnityEngine.InputSystem.Interactions
     public class CircleInteraction : IInputInteraction<Vector2>
     {
         public float duration;
-
-        /// <summary>
-        /// Magnitude threshold that must be crossed by an actuated control for the control to
-        /// be considered pressed.
-        /// </summary>
-        /// <remarks>
-        /// If this is less than or equal to 0 (the default), <see cref="InputSettings.defaultButtonPressPoint"/> is used instead.
-        /// </remarks>
-        /// <seealso cref="InputControl.EvaluateMagnitude()"/>
-        public float pressPoint;
-
-        private float pressPointOrDefault =>
-            pressPoint > 0.0 ? pressPoint : ButtonControl.s_GlobalDefaultButtonPressPoint;
-
-        private double m_TimePressed;
+        public int maxInflections;
 
         private InputActionPhase actionPhase;
         private List<Vector2> gesturePoints;
@@ -45,10 +32,10 @@ namespace UnityEngine.InputSystem.Interactions
                 Debug.Log($"context phase {actionPhase} -> {context.phase}");
                 actionPhase = context.phase;
             }
-            // Debug.Log(context.control.ReadValueAsObject());
 
             if (context.timerHasExpired)
             {
+                Debug.Log("Timer expired");
                 context.Canceled();
                 return;
             }
@@ -56,42 +43,82 @@ namespace UnityEngine.InputSystem.Interactions
             switch (context.phase)
             {
                 case InputActionPhase.Waiting:
-                    // if (context.ControlIsActuated(pressPointOrDefault))
                 {
-                    m_TimePressed = context.time;
-
-                    context.Started();
-                    context.SetTimeout(duration);
-
-                    gesturePoints = new();
+                    if (context.control.valueType == typeof(System.Single))
+                    {
+                        var clickValue = (float)context.control.ReadValueAsObject();
+                        if (Math.Abs(clickValue - 1) < .1f)
+                        {
+                            Debug.Log($"mouse click down. Max duration: {duration}");
+                            context.SetTimeout(duration);
+                            context.Started();
+                            gesturePoints = new List<Vector2>();
+                        }
+                    }
                 }
-
-                    break;
+                break;
 
                 case InputActionPhase.Started:
-                    var newGesturePoint = (Vector2)context.control.ReadValueAsObject();
+                    
+                    if (context.control.valueType == typeof(System.Single))
+                    {
+                        float clickValue = (float)context.control.ReadValueAsObject();
+                        
+                        Debug.Log($"mouse click value {clickValue}");
+                        if (clickValue == 0)
+                        {
+                            
+                            bool isCircleRecognized = IsCircleRecognized();
+                            Debug.Log($"recognized: {isCircleRecognized}");
+                            if (isCircleRecognized)
+                            {
+                                context.Performed();
+                            }
+                            else
+                            {
+                                context.Canceled();
+                            }
+                            return;
+                        }
+                        else
+                        {
+                           Debug.LogError("Click value is 1 in phase.Started!"); 
+                        }
+                        // Debug.Log($"click: {}");
+                    }
+                    
+                    // Debug.LogWarning(context.control.valueType);
+                    Vector2 newGesturePoint = (Vector2)context.control.ReadValueAsObject();
                     gesturePoints.Add(newGesturePoint);
                     // Debug.Log(gesturePoints.Count);
 
+                    break;
+
+                case InputActionPhase.Performed:
+                    break;
+            }
+
+            bool IsCircleRecognized()
+            {
                     //If we don't have enough points, exit
                     if (gesturePoints.Count < 2)
                     {
-                        return;
+                        return false;
                     }
-
+                
                     int inflections = 0;
                     for (int i = 2; i < (gesturePoints.Count - 1); i++)
                     {
-                        float currentDx = dx(gesturePoints[i], gesturePoints[i - 1]);
-                        float currentDy = dy(gesturePoints[i], gesturePoints[i - 1]);
-                        float prevDx = dx(gesturePoints[i - 1], gesturePoints[i - 2]);
-                        float prevDy = dy(gesturePoints[i - 1], gesturePoints[i - 2]);
+                        float currentDx = Dx(gesturePoints[i], gesturePoints[i - 1]);
+                        float currentDy = Dy(gesturePoints[i], gesturePoints[i - 1]);
+                        float prevDx = Dx(gesturePoints[i - 1], gesturePoints[i - 2]);
+                        float prevDy = Dy(gesturePoints[i - 1], gesturePoints[i - 2]);
 
                         bool signChangedX = Sign(currentDx) != Sign(prevDx) && currentDx != 0 && prevDx != 0;
                         bool signChangedY = Sign(currentDy) != Sign(prevDy) && currentDy != 0 && prevDy != 0;
                         if (signChangedX || signChangedY)
                         {
-                            Debug.Log($"inflection dx:{currentDx} dy:{currentDy} prevDx:{prevDx} prevDy{prevDy}");
+                            // Debug.Log($"inflection dx:{currentDx} dy:{currentDy} prevDx:{prevDx} prevDy{prevDy}");
                             inflections++;
                         }
                     }
@@ -99,14 +126,12 @@ namespace UnityEngine.InputSystem.Interactions
                     if (0 < inflections)
                     {
                         // Debug.Log($"inflections count: {inflections}");
-                        if (inflections > 5)
+                        if (inflections > maxInflections)
                         {
                             Debug.LogError(@"Excessive inflections");
-                            context.Canceled();
-                            return;
+                            return false;
                         }
                     }
-
 
                     Rect circleRect = BoundingRect(gesturePoints);
 
@@ -116,7 +141,6 @@ namespace UnityEngine.InputSystem.Interactions
                     {
                         distance += AngleBetweenPoints(gesturePoints[i], gesturePoints[i + 1], center);
                     }
-                    // Debug.Log(distance);
 
                     float transitTolerance = distance - 2 * Mathf.PI;
 
@@ -126,23 +150,17 @@ namespace UnityEngine.InputSystem.Interactions
                         bool isTooFarFromCircle = transitTolerance < -(Mathf.PI / 4.0f);
                         if (isTooFarFromCircle)
                         {
-                            return;
+                            return false;
                         }
                     }
 
                     if (transitTolerance > Mathf.PI) // additional 180 degrees
                     {
                         // Debug.Log("too long");
-                        return;
+                        return false;
                     }
 
-                    context.Performed();
-                    break;
-
-                case InputActionPhase.Performed:
-                    if (!context.ControlIsActuated(pressPointOrDefault))
-                        context.Canceled();
-                    break;
+                    return true;
             }
 
             float AngleBetweenPoints(Vector2 point1, Vector2 point2, Vector2 center)
@@ -155,7 +173,7 @@ namespace UnityEngine.InputSystem.Interactions
                 Vector2 localPoint0 = PointWithOrigin(point1, center);
                 Vector2 localPoint1 = PointWithOrigin(point2, center);
                 float dotProduct = Vector2.Dot(localPoint0, localPoint1);
-                float dotProductNormalized = dotProduct / (localPoint0.magnitude * localPoint1.magnitude);
+                float dotProductNormalized = Mathf.Clamp(dotProduct / (localPoint0.magnitude * localPoint1.magnitude), -1.0f, 1.0f);
                 //Acos returns angle between vectors in radians
                 float acos = Mathf.Acos(dotProductNormalized);
                 float resultAngle = Mathf.Abs(acos);
@@ -178,12 +196,12 @@ namespace UnityEngine.InputSystem.Interactions
                 return (x < 0.0f) ? (-1) : 1;
             }
 
-            float dx(Vector2 p1, Vector2 p2)
+            float Dx(Vector2 p1, Vector2 p2)
             {
                 return p2.x - p1.x;
             }
 
-            float dy(Vector2 p1, Vector2 p2)
+            float Dy(Vector2 p1, Vector2 p2)
             {
                 return p2.y - p1.y;
             }
@@ -225,7 +243,6 @@ namespace UnityEngine.InputSystem.Interactions
         /// <inheritdoc />
         public void Reset()
         {
-            m_TimePressed = 0;
             Debug.Log($"context phase {actionPhase} -> {InputActionPhase.Waiting}");
             actionPhase = InputActionPhase.Waiting;
         }
@@ -239,11 +256,11 @@ namespace UnityEngine.InputSystem.Interactions
     {
         protected override void OnEnable()
         {
-            m_PressPointSetting.Initialize("Press Point",
-                "Float value that an axis control has to cross for it to be considered pressed.",
-                "Default Button Press Point",
-                () => target.pressPoint, v => target.pressPoint = v,
-                () => ButtonControl.s_GlobalDefaultButtonPressPoint);
+            m_MaxInflectionsSetting.Initialize("Max Inflections",
+                "Number of gesture drawing inflections, reaching which, the gesture is cancelled",
+                "Default Number of Inflections",
+                () => target.maxInflections, v => target.maxInflections = (int)v,
+                () => 5);
             m_DurationSetting.Initialize("Gesture time",
                 "Time in which the gesture has to be performed after it's start.",
                 "Default Duration Time",
@@ -252,11 +269,11 @@ namespace UnityEngine.InputSystem.Interactions
 
         public override void OnGUI()
         {
-            m_PressPointSetting.OnGUI();
+            m_MaxInflectionsSetting.OnGUI();
             m_DurationSetting.OnGUI();
         }
 
-        private CustomOrDefaultSetting m_PressPointSetting;
+        private CustomOrDefaultSetting m_MaxInflectionsSetting;
         private CustomOrDefaultSetting m_DurationSetting;
     }
 #endif
