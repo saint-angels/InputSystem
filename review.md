@@ -1,26 +1,30 @@
 # Review
 
 
-# TODO:
-- make tests
-- add defaults
-- can we make it behave more like a button? Overriding the
-"actuation point" to trigger when it becomes a circle
-- support different input methods
+# How I approached the problem
+When writing code for my Circle Interaction, I've used the existing MouseVisualizer scene, because it provided nice visuals of the mouse movements.
+
+I've found an Objective-C code for circle gesture recognition for iOS, and used it as the basis for my interaction logic.
+
+At first, I did continuous recognition in the stream of inputs, because it was simpler to set up.
+After that, I figured out how to use a simple binding modifier.
+With the modifier, mouse movements would start recording only when the mouse button was pressed, and circle recognition would execute only after mouse button release.
+
+
+# Obstacles
+The documentation was the main obstacle in my way. 
+I think the docs do a good job at explaining how to use the Input System in general and how its systems work individually. But when you need to connect these systems in a custom way, it can be very hard to figure out.
+
+The documentation just doesn't tell you how to use methods/fields in sufficient detail.
+And the example code samples are often too brief.
+
+
+# How I would improve the solution
+- make gesture recognition tests
+- add gesture code comments/documentation
+- hook up the interaction to a gesture visualizer, to see recorded mouse positions
+- support different input methods, including gamepad sticks 
 - write documentation that highlights all usage scenarios
-
-
-# WTFs:
-
-Guide tells you how to select things in editor
-and how they work individually
-
-But it doesn't tell you how to elements connect
-Like, 
-- how do you get which binding is driving the interaction?
-
-On a page of every system, it would be great to mention things that it interacts with and how.
-If examples are present, that would be even better.
-
-It makes me feel, that the documentation expects the user to read every page thoroughly and form the required connections themselves.
-
+- find a better way to process an input binding with a modifier 
+Now my interaction handles 2 control types(mouse positions and a mouse click) in a hacky way:  
+if (context.control.valueType == typeof(System.Single))

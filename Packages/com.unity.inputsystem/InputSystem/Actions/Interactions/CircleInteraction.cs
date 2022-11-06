@@ -11,10 +11,6 @@ using UnityEngine.InputSystem.Editor;
 
 namespace UnityEngine.InputSystem.Interactions
 {
-    /// <summary>
-    /// Performs the action if the control is pressed and held for at least the
-    /// set duration (which defaults to <see cref="InputSettings.defaultHoldTime"/>).
-    /// </summary>
     [DisplayName("Circle")]
     public class CircleInteraction : IInputInteraction<Vector2>
     {
@@ -64,12 +60,12 @@ namespace UnityEngine.InputSystem.Interactions
                     {
                         float clickValue = (float)context.control.ReadValueAsObject();
                         
-                        Debug.Log($"mouse click value {clickValue}");
+                        // Debug.Log($"mouse click value {clickValue}");
                         if (clickValue == 0)
                         {
                             
                             bool isCircleRecognized = IsCircleRecognized();
-                            Debug.Log($"recognized: {isCircleRecognized}");
+                            // Debug.Log($"recognized: {isCircleRecognized}");
                             if (isCircleRecognized)
                             {
                                 context.Performed();
@@ -84,13 +80,10 @@ namespace UnityEngine.InputSystem.Interactions
                         {
                            Debug.LogError("Click value is 1 in phase.Started!"); 
                         }
-                        // Debug.Log($"click: {}");
                     }
                     
-                    // Debug.LogWarning(context.control.valueType);
                     Vector2 newGesturePoint = (Vector2)context.control.ReadValueAsObject();
                     gesturePoints.Add(newGesturePoint);
-                    // Debug.Log(gesturePoints.Count);
 
                     break;
 
@@ -250,7 +243,7 @@ namespace UnityEngine.InputSystem.Interactions
 
 #if UNITY_EDITOR
     /// <summary>
-    /// UI that is displayed when editing <see cref="HoldInteraction"/> in the editor.
+    /// UI that is displayed when editing <see cref="CircleInteraction"/> in the editor.
     /// </summary>
     internal class CircleInteractionEditor : InputParameterEditor<CircleInteraction>
     {
